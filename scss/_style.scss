@@ -1,0 +1,309 @@
+ // Global
+ button.btn {
+    cursor: pointer;
+    &:focus {
+      box-shadow: 0 0 0 0px;
+    }
+}
+
+.no-padding {
+padding: 0;
+}
+
+.section-head {
+    color: rgb(59, 59, 59);
+}
+
+.section-head2 {
+    color: rgb(240, 239, 239);
+}
+
+// Navbar
+nav.navbar {
+    background: #8FAABE;
+    a.navbar-brand {
+        // color: rgb(241, 128, 62);
+        color: rgba(255, 250, 247, 0.733);
+        font-size: 1.35rem;
+        font-weight: bold;
+    }
+    .collapse .navbar-nav li a {
+        font-size: 14px;
+        font-weight: bold;
+        color: rgba(255, 255, 255, 0.596);
+    }
+    // .collapse .navbar-nav li.active a {
+    //     color: rgba(28, 81, 131, 0.692);
+    //     color: rgb(238, 167, 95);
+    // }
+}
+
+// Highlight Menu Items
+#top-menu {
+    .active a {
+        color: #023971!important;
+        transition: all 0.5s ease;
+        &::after {
+            content: '';
+            border-bottom: 3px solid #023971;
+            position: relative;
+            width: 100%;
+            display: block;
+            top: 8px;
+            transition: all 0.5s ease;
+        }
+    }
+}
+
+// Intro Text Box
+#intro-section {
+    width: 100%;
+    height: 450px;
+    background: url("../img/fot-header.jpeg") no-repeat;
+    background-size: cover;
+    background-position-y: 37%;
+    clip-path: polygon(0 0,100% 0,100% 78%,0 100%);
+    .intro-text {
+        margin-top: 100px;
+        background: rgba(216, 216, 216, 0.548);
+        // color: rgb(238, 236, 236);
+        color: rgba(3, 63, 143, 0.514);
+        font-family: Arial, sans-serif;
+        text-transform: uppercase;
+        font-size: 27px;
+        font-weight: bold;
+        z-index: 101;
+        .intro-main-word {
+            color: rgb(238, 167, 95);
+        }
+    }
+}
+
+// Section Explore
+#section-explore {
+    background: #023A73;
+    color: #fff;
+    .fa {
+        color: $primary-color;
+        font-size: 25px;
+    }
+    p {
+        margin-bottom: 0;
+    }
+}
+
+// Section Offer
+#section-offer {
+    .icon-wrapper {
+        display: table; 
+        color: #36A7E4;
+        background: $primary-color;
+        width: 80px;
+        height: 80px;
+        border-radius: 100%;
+        font-size: 32px;
+        i {
+            display: table-cell;
+            vertical-align: middle;
+            text-align: center;
+        }
+    }
+       
+    .offer-content {
+        min-height: 80px;
+        p {
+            display: inline-block;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+    }
+
+    .offer-content-line {
+        p {
+            margin-bottom: 0;
+        }
+        &::after {
+            content: "";
+            background: $primary-color;
+            display: block;
+            border: 1px solid $primary-color;
+            margin-top: 15px;
+            width: 60px;
+        }
+    }
+}
+
+// Gallery
+#property-gallery {
+    background: #F5F5F5;
+    .gallery-wrapper {
+        position: relative;
+        max-width: 250px;
+        .gallery-hover {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            background: rgba(255, 188, 63, 0.815);
+            transition: opacity .6s;
+            .gallery-content {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                color: #fff;
+            }
+            &:hover{
+                opacity: 0.8;
+            }
+        }
+    }
+    img {
+        max-width: 250px;
+    }
+    .card {
+        width: 230px;
+    }
+    .card, .card .card-header, .card .list-group-item {
+        background: transparent;
+        border: none;
+        font-size: 14px;
+        padding-left: 20px;
+        color: #fff;
+    }
+    .card .list-group-item {
+        padding-top: 5px;
+        padding-bottom: 5px;
+        .main-word {
+            font-weight: bold;
+        }
+    }
+}
+
+#portfolio .portfolio-item .portfolio-link .portfolio-hover {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-transition: all ease .5s;
+    -moz-transition: all ease .5s;
+    transition: all ease .5s;
+    opacity: 0;
+    background: rgba(254,209,54,.9);
+}
+
+#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content {
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    height: 20px;
+    margin-top: -12px;
+    text-align: center;
+    color: #fff;
+}
+
+// Contact
+#section-contact {
+    padding-bottom: 170px; 
+    background: #222222;
+    color: #fff;
+    clip-path: polygon(0 0,100% 0,100% 100%,0 85%);
+    .card {
+        border: none;
+        border-top: 1px solid white;
+        border-radius: 0;
+        background: transparent;
+        .card-text {
+            margin-bottom: 0px;
+            font-size: 13px;
+            a {
+                color: rgba(255, 105, 11, 0.705);
+            }
+        }
+        button.subscribe-button {
+            width: 100%;
+            height: 40px;
+        }
+    }
+}
+
+#contactForm {
+    input, textarea {
+        width: 100%;
+    }
+    .form-group {
+        margin-bottom: 0;
+        input.form-control, textarea {
+            height: auto;
+            padding: 17px;
+            border-radius: 4px;
+            font-size: 14px;
+            font-weight: bold;
+            color: #222222;
+        }
+    }
+    button {
+        cursor: pointer;
+    }
+}
+
+// Footer
+footer {
+    color: #36A7E4;
+    .social-icons {
+        &:first-child {
+            margin-left: 15px;
+        }
+        a {
+            border-radius: 100%;
+            display:block;
+            line-height:37px;
+            width:37px;
+            height:37px;
+            margin-right: 15px;
+            outline: 0;
+            -webkit-transition:all .3s;
+            -moz-transition:all .3s;
+            transition:all .3s;color:#fff;
+            background-color:#FF6B0B;
+            &:hover {
+                background-color: #36A7E4;
+            }
+            .fa {
+                font-size:18px;
+                border-radius: 100%;
+            }
+        }
+    }
+}
+
+// Button Go To Top
+#goToTop {
+    position: fixed;
+    width: 60px;
+    height: 70px;
+    border-radius: 3px;
+    background: rgb(173, 182, 190);
+    bottom: 25px;
+    right: 55px;
+    cursor: pointer;
+    display: none;
+    a {
+        display: block;
+        width: 100%;
+        height: 100%;
+        .fa {
+            color: rgb(249, 252, 255);
+            font-size: space(2);
+            transition: color 0.5s ease;
+        }
+        &:hover {
+            background: rgb(173, 182, 190);
+            text-decoration: none;
+            .fa {
+                color: rgb(47, 145, 236);
+            }
+        }
+    }
+}
+
+
